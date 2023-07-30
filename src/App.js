@@ -13,8 +13,9 @@ export default function App() {
             <div className="flex gap-4 flex-nowrap overflow-x-auto lg:flex-wrap">
                 {Array(14)
                     .fill(true)
-                    .map(() => (
+                    .map((item, index) => (
                         <Card
+                            key={index}
                             title="Brimstone Sands"
                             description={description}
                             promoText="Save up to 15%"
