@@ -1,39 +1,27 @@
 import "./App.css";
 
+import { Card } from "./components/Card";
+
+const description = [
+    "Unlock the end-game content",
+    "Unlock high-level crafting",
+    "Complete the main questline",
+];
 export default function App() {
     return (
-        <main class="h-screen bg-[#150F0D] pt-[34px] pl-[50px] pr-[50px]">
-            <div class="flex gap-4 flex-nowrap overflow-x-auto md:flex-wrap">
-                <div class="sticky top-0 left-0 flex-shrink-0 w-[calc(100%/5-(1rem*4/5))] h-32 bg-teal-200">
-                    01
-                </div>
-                <div class="sticky top-0 left-0 flex-shrink-0 w-[calc(100%/5-(1rem*4/5))] h-32 bg-teal-200">
-                    02
-                </div>
-                <div class="sticky top-0 left-0 flex-shrink-0 w-[calc(100%/5-(1rem*4/5))] h-32 bg-teal-200">
-                    03
-                </div>
-                <div class="sticky top-0 left-0 flex-shrink-0 w-[calc(100%/5-(1rem*4/5))] h-32 bg-teal-200">
-                    04
-                </div>
-                <div class="sticky top-0 left-0 flex-shrink-0 w-[calc(100%/5-(1rem*4/5))] h-32 bg-teal-200">
-                    05
-                </div>
-                <div class="sticky top-0 left-0 flex-shrink-0 w-[calc(100%/5-(1rem*4/5))] h-32 bg-teal-200">
-                    06
-                </div>
-                <div class="sticky top-0 left-0 flex-shrink-0 w-[calc(100%/5-(1rem*4/5))] h-32 bg-teal-200">
-                    07
-                </div>
-                <div class="sticky top-0 left-0 flex-shrink-0 w-[calc(100%/5-(1rem*4/5))] h-32 bg-teal-200">
-                    08
-                </div>
-                <div class="sticky top-0 left-0 flex-shrink-0 w-[calc(100%/5-(1rem*4/5))] h-32 bg-teal-200">
-                    09
-                </div>
-                <div class="sticky top-0 left-0 flex-shrink-0 w-[calc(100%/5-(1rem*4/5))] h-32 bg-teal-200">
-                    10
-                </div>
+        <main className="min-h-screen bg-[#150F0D] pt-[34px] pb-[34px] pl-[50px] pr-[50px]">
+            <div className="flex gap-4 flex-nowrap overflow-x-auto lg:flex-wrap">
+                {Array(14)
+                    .fill(true)
+                    .map(() => (
+                        <Card
+                            title="Brimstone Sands"
+                            description={description}
+                            promoText="Save up to 15%"
+                            price="$30"
+                            background=""
+                        />
+                    ))}
             </div>
         </main>
     );
