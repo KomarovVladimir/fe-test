@@ -12,6 +12,7 @@ const useCardStyles = createUseStyles({
         minHeight: 360,
         alignItems: "flex-start",
         background: `no-repeat center url(${bg})`,
+        backgroundSize: "cover",
         borderRadius: 12,
     },
     title: {
@@ -48,37 +49,37 @@ export const Card = ({
     const styles = useCardStyles();
 
     return (
-        <div
-            className={`sticky top-0 left-0 flex flex-col justify-end flex-shrink-0 lg:w-[calc(100%/5-(1rem*4/5))] ${styles.card}`}
-        >
-            <p className={styles.title}>{title}</p>
-            <div className="flex items-center pb-[10px]">
-                <img
-                    src={dots}
-                    alt="Decoration"
-                    className="mr-2 w-[19px] h-[81px] shrink-0"
-                />
-                <ul>
-                    {description?.map((text, index) => (
-                        <li
-                            key={index}
-                            className={
-                                index
-                                    ? styles.description
-                                    : `${styles.description} ${styles.descriptionHighlighted}`
-                            }
-                        >
-                            {text}
-                        </li>
-                    ))}
-                </ul>
+        <div className="sticky top-0 left-0 flex w-full lg:w-1/5 p-1 md:p-2">
+            <div className={`flex flex-col justify-end ${styles.card}`}>
+                <p className={styles.title}>{title}</p>
+                <div className="flex items-center pb-[10px]">
+                    <img
+                        src={dots}
+                        alt="Decoration"
+                        className="mr-2 w-[19px] h-[81px] shrink-0"
+                    />
+                    <ul>
+                        {description?.map((text, index) => (
+                            <li
+                                key={index}
+                                className={
+                                    index
+                                        ? styles.description
+                                        : `${styles.description} ${styles.descriptionHighlighted}`
+                                }
+                            >
+                                {text}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+                <div className={styles.promo}>Save up to 15%</div>
+                <div className="pb-[10px]">
+                    <p>From</p>
+                    <p>{price}</p>
+                </div>
+                <button {...{ onClick }} />
             </div>
-            <div className={styles.promo}>Save up to 15%</div>
-            <div className="pb-[10px]">
-                <p>From</p>
-                <p>{price}</p>
-            </div>
-            <button {...{ onClick }} />
         </div>
     );
 };
