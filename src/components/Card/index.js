@@ -24,7 +24,10 @@ export const Card = ({
     onClick,
 }) => (
     <div className="w-full lg:w-1/5 p-1 md:p-2 snap-start">
-        <CardWrapper className="flex flex-col justify-end" background={bg}>
+        <CardWrapper
+            className="flex flex-col justify-end px-[10px] py-[15px] md:px-[14px] md:py-[30px]"
+            background={bg}
+        >
             <Badge>Top offers !</Badge>
             <Title>{title}</Title>
             <div className="flex items-center pb-[10px]">
@@ -35,12 +38,19 @@ export const Card = ({
                     ))}
                 </Description>
             </div>
-            <Promo>Save up to 15%</Promo>
-            <div className="pb-[10px]">
-                <PriceLabel>From</PriceLabel>
-                <Price>{price}</Price>
+            <Promo className="w-full md:w-auto mb-4 md:mb-4">
+                Save up to 15%
+            </Promo>
+            <div className="flex items-center justify-between w-full md:items-end md:mb-[10px]">
+                <div className="flex flex-row  md:flex-col items-center md:items-start">
+                    <PriceLabel className="mr-[10px] mb:mr-0">From</PriceLabel>
+                    <Price>{price}</Price>
+                </div>
+                <ArrowButton
+                    className="w-7 h-7 md:w-12 md:h-12"
+                    {...{ onClick }}
+                />
             </div>
-            <ArrowButton {...{ onClick }} />
         </CardWrapper>
     </div>
 );

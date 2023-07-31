@@ -8,7 +8,6 @@ export const CardWrapper = styled.div`
     font-family: Montserrat;
     font-style: normal;
     font-weight: 700;
-    padding: 30px;
     min-height: 360px;
     align-items: flex-start;
     background: no-repeat center url(${({ background }) => background});
@@ -62,11 +61,13 @@ export const DescriptionItem = styled.li`
 
 export const Promo = styled.div`
     display: inline-block;
-    margin-bottom: 10px;
+    color: #000;
+    font-size: 9px;
     background-color: #f09a38;
     border-radius: 4px;
     padding: 3px 9px;
     line-height: 30px;
+    text-align: center;
     white-space: nowrap;
 `;
 
@@ -86,23 +87,19 @@ export const Price = styled.div`
 `;
 
 export const ArrowButton = styled.button`
-    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    right: 30px;
-    bottom: 30px;
-    width: 48px;
-    height: 48px;
     flex-shrink: 0;
     border-radius: 6px;
     background: linear-gradient(207deg, #141416 0%, #2d1b16 100%);
+    background-size: contain;
     box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.35);
 
     &:after {
         content: "";
-        height: 24px;
-        width: 24px;
+        height: 50%;
+        width: 50%;
         display: block;
         background: no-repeat center url(${arrow});
         opacity: 0.7;
