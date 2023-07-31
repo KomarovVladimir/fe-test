@@ -2,13 +2,13 @@ import { styled } from "styled-components";
 
 import arrow from "../../img/arrow.svg";
 import flame from "../../img/flame.png";
+import dot from "../../img/dot.png";
 
 export const CardWrapper = styled.div`
     position: relative;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 700;
-    min-height: 360px;
     align-items: flex-start;
     background: no-repeat center url(${({ background }) => background});
     background-size: cover;
@@ -33,9 +33,7 @@ export const CardWrapper = styled.div`
 `;
 
 export const Title = styled.p`
-    padding-bottom: 10px;
     color: #fff;
-    font-size: 20px;
     line-height: normal;
 `;
 
@@ -53,16 +51,26 @@ export const Decoration = styled.img`
 `;
 
 export const DescriptionItem = styled.li`
+    position: relative;
+    display: flex;
+    align-items: center;
     color: #a98b89;
-    font-size: 14px;
     line-height: 30px;
     white-space: nowrap;
+
+    &:before {
+        content: "";
+        height: 16px;
+        width: 16px;
+        margin-right: 8px;
+        display: inline-block;
+        background: no-repeat center url(${dot});
+    }
 `;
 
 export const Promo = styled.div`
     display: inline-block;
     color: #000;
-    font-size: 9px;
     background-color: #f09a38;
     border-radius: 4px;
     padding: 3px 9px;
@@ -72,17 +80,13 @@ export const Promo = styled.div`
 `;
 
 export const PriceLabel = styled.div`
-    margin-bottom: 3px;
     color: #a98b89;
-    font-size: 12px;
     font-weight: 600;
-    line-height: normal;
     line-height: normal;
 `;
 
 export const Price = styled.div`
     color: #fff;
-    font-size: 16px;
     line-height: normal;
 `;
 
@@ -111,11 +115,7 @@ export const Badge = styled.div`
     position: absolute;
     display: flex;
     align-items: center;
-    top: 30px;
-    right: 30px;
-    padding: 3px 9px;
     color: #f09a38;
-    font-size: 12px;
     line-height: 30px;
     border: 1px solid rgba(255, 255, 255, 0.15);
     background: rgba(255, 255, 255, 0.01);
@@ -124,11 +124,10 @@ export const Badge = styled.div`
 
     &:before {
         content: "";
-        width: 20px;
-        height: 20px;
         flex-shrink: 0;
         display: block;
         margin-right: 3px;
         background: no-repeat center url(${flame});
+        background-size: contain;
     }
 `;
