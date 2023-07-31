@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 
 export const CardWrapper = styled.div`
+    position: relative;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 700;
@@ -10,6 +11,23 @@ export const CardWrapper = styled.div`
     background: no-repeat center url(${({ background }) => background});
     background-size: cover;
     border-radius: 12px;
+
+    & > * {
+        z-index: 100;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: block;
+        background: linear-gradient(207deg, #141416 0%, #2d1b16 100%);
+        opacity: 0.7;
+        z-index: 1;
+    }
 `;
 
 export const Title = styled.p`
