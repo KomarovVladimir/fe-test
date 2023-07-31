@@ -1,8 +1,10 @@
 import {
+    ArrowButton,
     CardWrapper,
     DescriptionItem,
     Title,
     Description,
+    Decoration,
     Price,
     PriceLabel,
     Promo,
@@ -24,11 +26,7 @@ export const Card = ({
         <CardWrapper className="flex flex-col justify-end" background={bg}>
             <Title>{title}</Title>
             <div className="flex items-center pb-[10px]">
-                <img
-                    src={dots}
-                    alt="Decoration"
-                    className="mr-2 w-[19px] h-[81px] shrink-0"
-                />
+                <Decoration src={dots} alt="Decoration" />
                 <Description>
                     {description?.map((text, index) => (
                         <DescriptionItem key={index}>{text}</DescriptionItem>
@@ -40,7 +38,7 @@ export const Card = ({
                 <PriceLabel>From</PriceLabel>
                 <Price>{price}</Price>
             </div>
-            <button {...{ onClick }} />
+            <ArrowButton {...{ onClick }} />
         </CardWrapper>
     </div>
 );

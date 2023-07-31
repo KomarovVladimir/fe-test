@@ -1,5 +1,7 @@
 import { styled } from "styled-components";
 
+import arrow from "../../img/arrow.svg";
+
 export const CardWrapper = styled.div`
     position: relative;
     font-family: Montserrat;
@@ -43,6 +45,13 @@ export const Description = styled.ul`
     }
 `;
 
+export const Decoration = styled.img`
+    margin-right: 0.5rem;
+    width: 19px;
+    height: 81px;
+    flex-shrink: 0;
+`;
+
 export const DescriptionItem = styled.li`
     color: #a98b89;
     font-size: 14px;
@@ -73,4 +82,29 @@ export const Price = styled.div`
     color: #fff;
     font-size: 16px;
     line-height: normal;
+`;
+
+export const ArrowButton = styled.button`
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 30px;
+    bottom: 30px;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background: linear-gradient(207deg, #141416 0%, #2d1b16 100%);
+    box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.35);
+
+    &:after {
+        content: "";
+        height: 24px;
+        width: 24px;
+        display: block;
+        background: no-repeat center url(${arrow});
+        opacity: 0.7;
+        z-index: 1;
+    }
 `;
