@@ -34,9 +34,25 @@ export const DescriptionItem = styled.li`
 
 export const Promo = styled.div`
     display: inline-block;
+    margin-bottom: 10px;
     background-color: #f09a38;
     border-radius: 4px;
     padding: 3px 9px;
     line-height: 30px;
     white-space: nowrap;
+`;
+
+export const PriceLabel = styled.div`
+    margin-bottom: 3px;
+    color: #a98b89;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: normal;
+    line-height: normal;
+`;
+
+export const Price = styled.div`
+    color: #fff;
+    font-size: 16px;
+    line-height: normal;
 `;

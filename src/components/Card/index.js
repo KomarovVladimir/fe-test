@@ -3,6 +3,8 @@ import {
     DescriptionItem,
     Title,
     Description,
+    Price,
+    PriceLabel,
     Promo,
 } from "./styled";
 
@@ -35,8 +37,8 @@ export const Card = ({
             </div>
             <Promo>Save up to 15%</Promo>
             <div className="pb-[10px]">
-                <p>From</p>
-                <p>{price}</p>
+                <PriceLabel>From</PriceLabel>
+                <Price>{price}</Price>
             </div>
             <button {...{ onClick }} />
         </CardWrapper>
