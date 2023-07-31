@@ -11,7 +11,7 @@ export default function App() {
     return (
         <main className="min-h-screen bg-[#150F0D] pt-[34px] pb-[34px] pl-[50px] pr-[50px]">
             <div className="-m-1 flex flex-nowrap lg:flex-wrap md:-m-2 overflow-x-auto snap-x">
-                {Array(14)
+                {Array(10)
                     .fill(true)
                     .map((item, index) => (
                         <Card

@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 
 import arrow from "../../img/arrow.svg";
+import flame from "../../img/flame.png";
 
 export const CardWrapper = styled.div`
     position: relative;
@@ -106,5 +107,31 @@ export const ArrowButton = styled.button`
         background: no-repeat center url(${arrow});
         opacity: 0.7;
         z-index: 1;
+    }
+`;
+
+export const Badge = styled.div`
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 30px;
+    right: 30px;
+    padding: 3px 9px;
+    color: #f09a38;
+    font-size: 12px;
+    line-height: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(7.5px);
+    border-radius: 4px;
+
+    &:before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        display: block;
+        margin-right: 3px;
+        background: no-repeat center url(${flame});
     }
 `;

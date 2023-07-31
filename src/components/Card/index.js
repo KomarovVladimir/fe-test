@@ -1,13 +1,14 @@
 import {
     ArrowButton,
+    Badge,
     CardWrapper,
     DescriptionItem,
-    Title,
     Description,
     Decoration,
     Price,
     PriceLabel,
     Promo,
+    Title,
 } from "./styled";
 
 import bg from "../../img/card1.png";
@@ -24,6 +25,7 @@ export const Card = ({
 }) => (
     <div className="w-full lg:w-1/5 p-1 md:p-2 snap-start">
         <CardWrapper className="flex flex-col justify-end" background={bg}>
+            <Badge>Top offers !</Badge>
             <Title>{title}</Title>
             <div className="flex items-center pb-[10px]">
                 <Decoration src={dots} alt="Decoration" />
