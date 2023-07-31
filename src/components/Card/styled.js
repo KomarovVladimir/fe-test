@@ -38,16 +38,16 @@ export const Title = styled.p`
 `;
 
 export const Description = styled.ul`
-    > li:first-child: {
+    & > li:first-child {
         color: #f09a38;
     }
 `;
 
 export const DescriptionItem = styled.li`
     color: #a98b89;
-    fontsize: 14px;
+    font-size: 14px;
     line-height: 30px;
-    whitespace: nowrap;
+    white-space: nowrap;
 `;
 
 export const Promo = styled.div`
