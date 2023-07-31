@@ -25,6 +25,7 @@ const useCardStyles = createUseStyles({
         color: "#A98B89",
         fontSize: "14px",
         lineHeight: "30px",
+        whiteSpace: "nowrap",
     },
     descriptionHighlighted: {
         color: "#F09A38",
@@ -35,6 +36,7 @@ const useCardStyles = createUseStyles({
         borderRadius: "4px",
         padding: "3px 9px",
         lineHeight: "30px",
+        whiteSpace: "nowrap",
     },
 });
 
@@ -49,8 +51,8 @@ export const Card = ({
     const styles = useCardStyles();
 
     return (
-        <div className="sticky top-0 left-0 flex w-full lg:w-1/5 p-1 md:p-2">
-            <div className={`flex flex-col justify-end ${styles.card}`}>
+        <div className="w-full lg:w-1/5 p-1 md:p-2 snap-start">
+            <div className={"flex flex-col justify-end " + styles.card}>
                 <p className={styles.title}>{title}</p>
                 <div className="flex items-center pb-[10px]">
                     <img
