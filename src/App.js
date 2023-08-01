@@ -27,7 +27,6 @@ const CardsWrapper = styled.div`
     }
 `;
 
-//className="flex flex-nowrap -m-[6px] snap-x md:-m-2 2xl:flex-wrap"
 export const App = () => (
     <main className="min-h-screen bg-[#150F0D] py-[16px] px-[10px] md:py-[29px] md:px-[20px] 2xl:py-[34px] 2xl:px-[50px]">
         <CardsWrapper>
