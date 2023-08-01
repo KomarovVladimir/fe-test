@@ -22,6 +22,16 @@ export const descriptions = [
         image: images[1]
     },
     {
+        title: "Mutated Lazarus Instrumentality",
+        description: [
+            "Umbral Shards & Gear",
+            "Guaranteed Completion",
+            "Free Streaming service"
+        ],
+        price: "$30",
+        image: images[2]
+    },
+    {
         title: "The Ennead",
         description: [
             "590+ GS Legendary drops",
@@ -29,7 +39,7 @@ export const descriptions = [
             "Achievements"
         ],
         price: "$2 500",
-        image: images[2]
+        image: images[3]
     },
     {
         title: "Gathering Bundle",
@@ -39,7 +49,7 @@ export const descriptions = [
             "Discount for progress"
         ],
         price: "$3 150",
-        image: images[3]
+        image: images[4]
     },
     {
         title: "Arena 3v3 Boost",
@@ -49,7 +59,7 @@ export const descriptions = [
             "Lots of Azoth Salt"
         ],
         price: "$496",
-        image: images[4]
+        image: images[5]
     },
     {
         title: "Tempest’s Heart",
@@ -59,7 +69,7 @@ export const descriptions = [
             "Fast and safe Expedition run"
         ],
         price: "$30",
-        image: images[5]
+        image: images[6]
     },
     {
         title: "Mutated Tempest’s Heart",
@@ -67,16 +77,6 @@ export const descriptions = [
             "Tier V Gear (up to 600 GS)",
             "Coins, Loot, and Experience",
             "Fast and safe Expedition run"
-        ],
-        price: "$30",
-        image: images[6]
-    },
-    {
-        title: "Mutated Lazarus Instrumentality",
-        description: [
-            "Umbral Shards & Gear",
-            "Guaranteed Completion",
-            "Free Streaming service"
         ],
         price: "$30",
         image: images[7]

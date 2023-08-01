@@ -62,7 +62,6 @@ export const DescriptionItem = styled.li`
     display: flex;
     align-items: center;
     color: #a98b89;
-    line-height: 30px;
     white-space: nowrap;
 
     &:before {

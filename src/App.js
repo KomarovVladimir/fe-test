@@ -31,7 +31,7 @@ export const App = () => (
                             key={index}
                             promoText="Save up to 15%"
                             background={image}
-                            topSeller={index > 2}
+                            topSeller={index > 1}
                             {...{title, description, price}}
                         />
                     ))}

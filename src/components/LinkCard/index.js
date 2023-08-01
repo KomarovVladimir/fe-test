@@ -13,19 +13,19 @@ export const LinkCard = () => (
                 flex-col
                 items-center
                 justify-center
-                min-h-[269px]
-                min-w-[294px]
+                min-h-[229px]
+                min-w-[274px]
                 px-[10px]
                 py-[20px]
-                md:min-h-[360px]
-                md:min-w-[346px] 
+                md:min-h-[316px]
+                md:min-w-[300px] 
                 md:px-[15px]
                 md:py-[30px]
                 2xl:p-[30px]
-                2xl:min-h-[420px]
+                2xl:min-h-[360px]
                 2xl:min-w-full"
         >
-            <img src={offer} alt="Custom offer" className="w-[188px] h-[188px]" />
+            <img src={offer} alt="Custom offer" className="-mt-8 w-[188px] h-[188px]" />
             <p className="-mt-8">Custom Offers</p>
         </CardContent>
     </CardWrapper>
