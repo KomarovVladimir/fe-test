@@ -8,7 +8,7 @@ export const CardWrapper = styled.div`
     font-family: Montserrat;
     font-style: normal;
     font-weight: 700;
-`
+`;
 
 export const CardContent = styled.div`
     position: relative;

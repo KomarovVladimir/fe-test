@@ -1,7 +1,4 @@
-import {
-    CardContent,
-    CardWrapper,
-} from "./styled";
+import { CardContent, CardWrapper } from "./styled";
 
 import offer from "../../img/offer.svg";
 
@@ -13,7 +10,7 @@ export const LinkCard = () => (
                 flex-col
                 items-center
                 justify-center
-                min-h-[229px]
+                min-h-[249px]
                 min-w-[274px]
                 px-[10px]
                 py-[20px]
@@ -25,7 +22,11 @@ export const LinkCard = () => (
                 2xl:min-h-[360px]
                 2xl:min-w-full"
         >
-            <img src={offer} alt="Custom offer" className="-mt-8 w-[188px] h-[188px]" />
+            <img
+                src={offer}
+                alt="Custom offer"
+                className="-mt-8 w-[188px] h-[188px]"
+            />
             <p className="-mt-8">Custom Offers</p>
         </CardContent>
     </CardWrapper>

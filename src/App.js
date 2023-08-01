@@ -11,9 +11,9 @@ const CardsWrapper = styled.div`
     z-index: 1;
     &:after {
         content: "";
-        position: sticky;
+        position: fixed;
         display: block;
-        background: linear-gradient(
+        background-image: linear-gradient(
             270deg,
             #151416 0%,
             rgba(21, 20, 22, 0) 100%
@@ -21,6 +21,7 @@ const CardsWrapper = styled.div`
         padding-left: 84px;
         top: 0;
         right: 0;
+        bottom: 0;
         z-index: 1000;
     }
     &::-webkit-scrollbar {
@@ -30,8 +31,8 @@ const CardsWrapper = styled.div`
 `;
 
 export const App = () => (
-    <main className="min-h-screen bg-[#150F0D] pt-[34px] pb-[34px] pl-[50px] pr-[50px]">
-        <CardsWrapper className="flex flex-nowrap 2xl:flex-wrap -m-[6px] md:-m-2 snap-x 2xl:after:invisible">
+    <main className="min-h-screen bg-[#150F0D] py-[16px] px-[10px] md:py-[29px] md:px-[20px] 2xl:py-[34px] 2xl:px-[50px]">
+        <CardsWrapper className="flex flex-nowrap -m-[6px] snap-x md:-m-2 2xl:flex-wrap 2xl:after:invisible">
             {descriptions.map(({ title, description, price, image }, index) => (
                 <Card
                     key={index}

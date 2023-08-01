@@ -26,7 +26,7 @@ export const Card = ({
                 flex-col
                 items-start
                 justify-end
-                min-h-[229px]
+                min-h-[249px]
                 min-w-[274px]
                 px-[10px]
                 py-[20px]
@@ -37,9 +37,11 @@ export const Card = ({
                 2xl:p-[30px]
                 2xl:min-h-[360px]
                 2xl:min-w-full"
-            {...{background}}
+            {...{ background }}
         >
-            {topSeller && <Badge className="
+            {topSeller && (
+                <Badge
+                    className="
                 top-2
                 right-2
                 px-2
@@ -56,14 +58,22 @@ export const Card = ({
                 2xl:top-[30px]
                 2xl:right-[30px]
                 2xl:text-[12px]"
-            >
-                Top offers !
-            </Badge>}
-            <Title className="max-w-[190px] text-[13px] mb-2 md:text-[20px] md:mb-[10px]">{title}</Title>
+                >
+                    Top offers !
+                </Badge>
+            )}
+            <Title className="max-w-[190px] text-[13px] mb-2 md:text-[20px] md:mb-[10px]">
+                {title}
+            </Title>
             <div className="flex items-center mb-[10px] md:mb-[7px] 2xl:mb-[10px]">
                 <Description>
                     {description?.map((text, index) => (
-                        <DescriptionItem key={index} className="leading-[25px] md:leading-[28px]">{text}</DescriptionItem>
+                        <DescriptionItem
+                            key={index}
+                            className="leading-[25px] md:leading-[28px]"
+                        >
+                            {text}
+                        </DescriptionItem>
                     ))}
                 </Description>
             </div>
@@ -73,7 +83,9 @@ export const Card = ({
             <div className="flex items-center justify-between w-full md:items-end">
                 <div className="flex flex-row  items-center 2xl:flex-col 2xl:items-start">
                     <PriceLabel className="mr-[10px] mb:mr-0">From</PriceLabel>
-                    <Price className="text-[14px] 2xl:text-[16px]">{price}</Price>
+                    <Price className="text-[14px] 2xl:text-[16px]">
+                        {price}
+                    </Price>
                 </div>
                 <ArrowButton
                     className="w-7 h-7 md:w-[35px] md:h-[35px] 2xl:w-[48px] 2xl:h-[48px]"
