@@ -12,7 +12,6 @@ export const CardWrapper = styled.div`
 
 export const CardContent = styled.div`
     position: relative;
-    align-items: flex-start;
     background: no-repeat center url(${({ background }) => background});
     background-size: cover;
     border-radius: 12px;

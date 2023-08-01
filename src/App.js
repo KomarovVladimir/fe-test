@@ -30,8 +30,8 @@ const CardsWrapper = styled.div`
 export default function App() {
     return (
         <main className="min-h-screen bg-[#150F0D] pt-[34px] pb-[34px] pl-[50px] pr-[50px]">
-            <CardsWrapper>
-                <div className="flex flex-nowrap lg:flex-wrap -m-[6px] md:-m-2 overflow-x-auto snap-x">
+            <CardsWrapper className="2xl:after:invisible">
+                <div className="flex flex-nowrap 2xl:flex-wrap -m-[6px] md:-m-2 overflow-x-auto snap-x">
                     {Array(10)
                         .fill(true)
                         .map((item, index) => (
