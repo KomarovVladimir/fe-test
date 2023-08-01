@@ -1,10 +1,10 @@
 import {
     ArrowButton,
     Badge,
+    CardContent,
     CardWrapper,
     DescriptionItem,
     Description,
-    Decoration,
     Price,
     PriceLabel,
     Promo,
@@ -22,8 +22,8 @@ export const Card = ({
     promo,
     onClick,
 }) => (
-    <div className="w-full min-w-[274px] lg:w-1/5 p-1 md:p-2 snap-start text-[9px]">
-        <CardWrapper
+    <CardWrapper className="w-full min-w-[274px] lg:w-1/5 p-[6px] md:p-2 snap-start text-[9px]">
+        <CardContent
             className="flex flex-col justify-end px-[10px] pt-[34px] pb-[15px] md:px-[14px] md:py-[30px]"
             background={bg}
         >
@@ -51,6 +51,6 @@ export const Card = ({
                     {...{ onClick }}
                 />
             </div>
-        </CardWrapper>
-    </div>
+        </CardContent>
+    </CardWrapper>
 );

@@ -5,10 +5,13 @@ import flame from "../../img/flame.png";
 import dot from "../../img/dot.png";
 
 export const CardWrapper = styled.div`
-    position: relative;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 700;
+`
+
+export const CardContent = styled.div`
+    position: relative;
     align-items: flex-start;
     background: no-repeat center url(${({ background }) => background});
     background-size: cover;
@@ -26,7 +29,12 @@ export const CardWrapper = styled.div`
         height: 100%;
         width: 100%;
         display: block;
-        background: linear-gradient(207deg, #141416 0%, #2d1b16 100%);
+        background: linear-gradient(
+            207deg,
+            rgba(20, 20, 22, 0.68) 0%,
+            rgba(45, 27, 22, 0.85) 100%
+        );
+        border-radius: 12px;
         opacity: 0.7;
         z-index: 1;
     }
