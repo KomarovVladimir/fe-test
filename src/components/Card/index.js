@@ -16,7 +16,7 @@ export const Card = ({
     description,
     price,
     background,
-    promo,
+    topSeller,
     onClick,
 }) => (
     <CardWrapper className="w-full 2xl:w-1/5 p-[6px] md:p-2 snap-start text-[9px] md:text-[10px] 2xl:text-[14px]">
@@ -39,7 +39,7 @@ export const Card = ({
                 2xl:min-w-full"
             {...{background}}
         >
-            <Badge className="
+            {topSeller && <Badge className="
                 top-2
                 right-2
                 px-2
@@ -56,7 +56,7 @@ export const Card = ({
                 2xl:text-[12px]"
             >
                 Top offers !
-            </Badge>
+            </Badge>}
             <Title className="text-[13px] mb-2 md:text-[20px] md:mb-[10px]">{title}</Title>
             <div className="flex items-center mb-[10px] md:mb-[15px] 2xl:mb-[10px]">
                 <Description>

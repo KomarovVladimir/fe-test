@@ -1,17 +1,8 @@
 import { styled } from "styled-components";
 
 import "./App.css";
-import { Card } from "./components/Card";
-
-import images from "./img"
-
-console.log(images);
-
-const description = [
-    "Unlock the end-game content",
-    "Unlock high-level crafting",
-    "Complete the main questline",
-];
+import { Card, LinkCard } from "./components";
+import { descriptions } from "./data"
 
 const CardsWrapper = styled.div`
    position: relative;
@@ -25,31 +16,27 @@ const CardsWrapper = styled.div`
         width: 84px;
         height: 100%;
         top: 0;
-        right: 0;
+        right: -15px;
         z-index: 1000;
     }
 `;
 
 
-export default function App() {
-    return (
-        <main className="min-h-screen bg-[#150F0D] pt-[34px] pb-[34px] pl-[50px] pr-[50px]">
-            <CardsWrapper className="2xl:after:invisible">
-                <div className="flex flex-nowrap 2xl:flex-wrap -m-[6px] md:-m-2 overflow-x-auto snap-x">
-                    {Array(9)
-                        .fill(true)
-                        .map((item, index) => (
-                            <Card
-                                key={index}
-                                title="Brimstone Sands"
-                                description={description}
-                                promoText="Save up to 15%"
-                                price="$30"
-                                background={images[index]}
-                            />
-                        ))}
-                </div>
-            </CardsWrapper>
-        </main>
-    );
-}
+export const App = () => (
+    <main className="min-h-screen bg-[#150F0D] pt-[34px] pb-[34px] pl-[50px] pr-[50px]">
+        <CardsWrapper className="2xl:after:invisible">
+            <div className="flex flex-nowrap 2xl:flex-wrap -m-[6px] md:-m-2 overflow-x-auto snap-x">
+                {descriptions.map(({ title, description, price, image }, index) => (
+                        <Card
+                            key={index}
+                            promoText="Save up to 15%"
+                            background={image}
+                            topSeller={index > 2}
+                            {...{title, description, price}}
+                        />
+                    ))}
+                <LinkCard />
+            </div>
+        </CardsWrapper>
+    </main>
+);
