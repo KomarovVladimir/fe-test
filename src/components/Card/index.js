@@ -11,9 +11,6 @@ import {
     Title,
 } from "./styled";
 
-import bg from "../../img/card1.png";
-
-//TODO: Replace the background prop with some actual data
 export const Card = ({
     title,
     description,
@@ -40,7 +37,7 @@ export const Card = ({
                 2xl:p-[30px]
                 2xl:min-h-[420px]
                 2xl:min-w-full"
-            background={bg}
+            {...{background}}
         >
             <Badge className="
                 top-2

@@ -3,6 +3,10 @@ import { styled } from "styled-components";
 import "./App.css";
 import { Card } from "./components/Card";
 
+import images from "./img"
+
+console.log(images);
+
 const description = [
     "Unlock the end-game content",
     "Unlock high-level crafting",
@@ -41,7 +45,7 @@ export default function App() {
                                 description={description}
                                 promoText="Save up to 15%"
                                 price="$30"
-                                background=""
+                                background={images[index]}
                             />
                         ))}
                 </div>
