@@ -36,7 +36,7 @@ export default function App() {
         <main className="min-h-screen bg-[#150F0D] pt-[34px] pb-[34px] pl-[50px] pr-[50px]">
             <CardsWrapper className="2xl:after:invisible">
                 <div className="flex flex-nowrap 2xl:flex-wrap -m-[6px] md:-m-2 overflow-x-auto snap-x">
-                    {Array(10)
+                    {Array(9)
                         .fill(true)
                         .map((item, index) => (
                             <Card
