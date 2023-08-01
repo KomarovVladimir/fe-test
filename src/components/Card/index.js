@@ -11,6 +11,7 @@ import {
     Title,
 } from "./styled";
 
+//Replace tailwind media queries with styled components. Add theme for custom breakpoints
 export const Card = ({
     title,
     description,
